@@ -1,0 +1,4 @@
+RewriteEngine on
+#RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://pwa.arrami.me/$1 [R=301,L]

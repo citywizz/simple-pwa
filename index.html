@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#214FC6">
+  <title>TODO List</title>
+  <meta name="description" content="Application Web Progressive">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/normalize.min.css" media="all">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" media="all">
+  <link rel="stylesheet" href="assets/css/style.min.css" media="all">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <script src="assets/js/app.min.js" defer></script>
+
+  
+</head>
+
+<body>
+
+  <form class="form">
+    <label for="todo">Ajouter une tâche</label>
+    <input id="todo" type="text" placeholder="Entrer une TODO" />
+    <button type="submit">+</button>
+  </form>
+
+  <ul class="list-items"></ul>
+
+
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+    </script>
+    
+
+</body>
+
+</html>
